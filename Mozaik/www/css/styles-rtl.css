@@ -1,0 +1,30 @@
+/**
+ * @file
+ * RTL companion for the styles.scss file.
+ */
+/* Import Sass mixins, variables, Compass modules, etc. */
+/*! HiDPI v2.0.1 | MIT License | git.io/hidpi */
+/* HTML element (SMACSS base) rules */
+/**
+ * @file
+ * Normalize-rtl.scss is the RTL language extension of normalize.scss
+ */
+/**
+ * Lists
+ */
+/* line 9, ../sass/_normalize-rtl.scss */
+dd {
+  margin: 0 30px 0 0;
+}
+
+/* Address paddings set differently in IE 6/7. */
+/* line 16, ../sass/_normalize-rtl.scss */
+menu,
+ol,
+ul {
+  padding: 0 30px 0 0;
+}
+
+/* SMACSS theme rules */
+/* @import "theme-A-rtl"; */
+/* @import "theme-B-rtl"; */
