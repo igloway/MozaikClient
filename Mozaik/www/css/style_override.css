@@ -1,0 +1,28 @@
+#info a,
+#talk a,
+#rate a,
+#lines a,
+#remote a {
+  padding: 0 1.5em !important;
+}
+
+#volume a,
+#previous a,
+#backward a,
+#play-pause a,
+#forward a,
+#next a {
+  padding: 0 1.2em !important;
+}
+
+.page_padding{
+    padding-left: 23px;
+}
+
+#recommendations{
+    height: 550px;
+}
+
+h2 {
+    margin-bottom: 0em !important;
+}

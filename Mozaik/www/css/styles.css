@@ -622,15 +622,17 @@ table {
 /* line 21, ../sass/_topbar.scss */
 #logo-topbar a img {
   vertical-align: middle;
+  max-width: 117px;
+  max-height: 23px;
 }
 
-/* line 27, ../sass/_topbar.scss */
+/* line 29, ../sass/_topbar.scss */
 #search-topbar {
   float: left;
   width: 300px;
   height: 40px;
 }
-/* line 32, ../sass/_topbar.scss */
+/* line 34, ../sass/_topbar.scss */
 #search-topbar form {
   background-color: #fff;
   -webkit-border-radius: 20px;
@@ -640,26 +642,20 @@ table {
   margin: 8px 15px;
   position: relative;
 }
-/* line 41, ../sass/_topbar.scss */
+/* line 43, ../sass/_topbar.scss */
 #search-topbar form input[type="search"] {
   border: 0;
   background-color: transparent;
-  background-image: url("../img/img_mozaik/search-zap.png");
-  background-position: 10px 3px;
+  background-image: url("../css/img_mozaik/lightning.svg");
+  background-size: 18px 31px;
+  background-position: 6px -4px;
   background-repeat: no-repeat;
   width: 220px;
   outline: none;
   padding-left: 25px;
   margin: 2px 0;
 }
-@media (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124.8dpi), (min-resolution: 1.3dppx) {
-  /* line 41, ../sass/_topbar.scss */
-  #search-topbar form input[type="search"] {
-    background-image: url("../img/img_mozaik/search-zap@2x.png");
-    background-size: 18px 31px;
-  }
-}
-/* line 59, ../sass/_topbar.scss */
+/* line 56, ../sass/_topbar.scss */
 #search-topbar form input[type="submit"] {
   position: absolute;
   top: 5px;
@@ -668,42 +664,36 @@ table {
   width: 15px;
   border: 0;
   background-color: transparent;
-  background-image: url("../img/img_mozaik/search-submit.png");
+  background-image: url("../css/img_mozaik/zoom.svg");
+  background-size: 15px 15px;
   background-position: 0 0;
   background-repeat: no-repeat;
   text-indent: -9999px;
 }
-@media (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124.8dpi), (min-resolution: 1.3dppx) {
-  /* line 59, ../sass/_topbar.scss */
-  #search-topbar form input[type="submit"] {
-    background-image: url("../img/img_mozaik/search-submit@2x.png");
-    background-size: 28px 28px;
-  }
-}
-/* line 77, ../sass/_topbar.scss */
+/* line 70, ../sass/_topbar.scss */
 .ua-mobile-ipad #search-topbar form input[type="submit"] {
   right: 0;
 }
 
-/* line 84, ../sass/_topbar.scss */
+/* line 77, ../sass/_topbar.scss */
 #nav-topbar {
   float: right;
   height: 40px;
 }
-/* line 88, ../sass/_topbar.scss */
+/* line 81, ../sass/_topbar.scss */
 #nav-topbar ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 94, ../sass/_topbar.scss */
+/* line 87, ../sass/_topbar.scss */
 #nav-topbar ul li {
   float: left;
   height: 40px;
   position: relative;
   border-left: 1px solid #4e5985;
 }
-/* line 100, ../sass/_topbar.scss */
+/* line 93, ../sass/_topbar.scss */
 #nav-topbar ul li:before {
   content: '';
   position: absolute;
@@ -715,18 +705,23 @@ table {
   height: 40px;
   background-color: #393e56;
 }
-/* line 112, ../sass/_topbar.scss */
+/* line 105, ../sass/_topbar.scss */
 #nav-topbar ul li a {
   display: block;
   height: 40px;
   line-height: 40px;
   padding: 0 15px;
 }
-/* line 118, ../sass/_topbar.scss */
+/* line 111, ../sass/_topbar.scss */
 #nav-topbar ul li a img {
   vertical-align: middle;
 }
-/* line 124, ../sass/_topbar.scss */
+/* line 117, ../sass/_topbar.scss */
+#nav-topbar ul li#profile img {
+  max-width: 25px;
+  max-height: 25px;
+}
+/* line 125, ../sass/_topbar.scss */
 #nav-topbar ul li#places a {
   font-family: "Conv_ProximaNova-Semibold", sans-serif;
   color: #fff;
@@ -736,30 +731,30 @@ table {
   line-height: 43px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
-/* line 134, ../sass/_topbar.scss */
+/* line 135, ../sass/_topbar.scss */
 #nav-topbar ul li#places a:hover, #nav-topbar ul li#places a:active {
   text-decoration: none;
   border-bottom: 2px solid #4dbdec;
 }
-/* line 143, ../sass/_topbar.scss */
+/* line 144, ../sass/_topbar.scss */
 #nav-topbar ul li#settings svg {
   height: 16px;
   width: 18px;
   vertical-align: middle;
 }
-/* line 148, ../sass/_topbar.scss */
+/* line 149, ../sass/_topbar.scss */
 #nav-topbar ul li#settings svg .style0 {
   fill: #ffffff;
   clip-rule: evenodd;
   fill-rule: evenodd;
 }
-/* line 157, ../sass/_topbar.scss */
+/* line 158, ../sass/_topbar.scss */
 #nav-topbar ul li#logout svg {
   height: 20px;
   width: 20px;
   vertical-align: middle;
 }
-/* line 162, ../sass/_topbar.scss */
+/* line 163, ../sass/_topbar.scss */
 #nav-topbar ul li#logout svg .style0 {
   stroke-linejoin: round;
   stroke: #ffffff;
@@ -844,7 +839,7 @@ table {
   height: 50px;
   line-height: 50px;
   border-right: 1px solid #4e5985;
-  padding: 0 1.2em;
+  padding: 0 2em;
 }
 /* line 49, ../sass/_player.scss */
 #volume a:before,
@@ -1055,7 +1050,7 @@ table {
   height: 50px;
   line-height: 50px;
   border-left: 1px solid #4e5985;
-  padding: 0 1.5em;
+  padding: 0 2em;
 }
 /* line 245, ../sass/_player.scss */
 #info a:before,
@@ -1348,7 +1343,7 @@ table {
 #floating-menu {
   position: absolute;
   right: 15px;
-  bottom: 15px;
+  bottom: 55px;
   z-index: 200;
 }
 /* line 10, ../sass/_floatingmenu.scss */
@@ -1393,8 +1388,8 @@ table {
 /* line 43, ../sass/_floatingmenu.scss */
 #floating-menu-wrapper {
   position: absolute;
-  right: 15px;
-  bottom: 15px;
+  right: 25px;
+  bottom: 25px;
   z-index: 201;
   width: 50em;
   height: 50em;
@@ -1406,8 +1401,27 @@ table {
   background-color: rgba(0, 0, 0, 0.7);
   margin-right: -25em;
   margin-bottom: -25em;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  pointer-events: auto;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-/* line 55, ../sass/_floatingmenu.scss */
+/* line 58, ../sass/_floatingmenu.scss */
+.open #floating-menu-wrapper {
+  pointer-events: auto;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+/* line 63, ../sass/_floatingmenu.scss */
 #floating-menu-wrapper ul {
   list-style: none;
   margin: 0;
@@ -1416,7 +1430,7 @@ table {
   height: 50em;
   position: relative;
 }
-/* line 63, ../sass/_floatingmenu.scss */
+/* line 71, ../sass/_floatingmenu.scss */
 #floating-menu-wrapper ul li {
   position: absolute;
   top: 0;
@@ -1425,12 +1439,70 @@ table {
   height: 45px;
   width: 45px;
 }
-/* line 71, ../sass/_floatingmenu.scss */
+/* line 79, ../sass/_floatingmenu.scss */
 #floating-menu-wrapper ul li:first-child {
-  left: -22px;
+  left: -1.5em;
   top: 21em;
 }
-/* line 76, ../sass/_floatingmenu.scss */
+/* line 84, ../sass/_floatingmenu.scss */
+#floating-menu-wrapper ul li:first-child svg .style0 {
+  clip-rule: evenodd;
+  fill-rule: evenodd;
+  fill: #ffffff;
+}
+/* line 89, ../sass/_floatingmenu.scss */
+#floating-menu-wrapper ul li:first-child svg .style1 {
+  clip-rule: evenodd;
+  stroke: #ffffff;
+  fill: none;
+  stroke-miterlimit: 10;
+  fill-rule: evenodd;
+}
+/* line 99, ../sass/_floatingmenu.scss */
+#floating-menu-wrapper ul li:nth-child(2) {
+  left: 0.5em;
+  top: 13em;
+}
+/* line 104, ../sass/_floatingmenu.scss */
+#floating-menu-wrapper ul li:nth-child(2) svg .style0 {
+  clip-rule: evenodd;
+  fill-rule: evenodd;
+  fill: #ffffff;
+}
+/* line 112, ../sass/_floatingmenu.scss */
+#floating-menu-wrapper ul li:nth-child(3) {
+  left: 5em;
+  top: 6em;
+}
+/* line 117, ../sass/_floatingmenu.scss */
+#floating-menu-wrapper ul li:nth-child(3) svg .style0 {
+  clip-rule: evenodd;
+  fill-rule: evenodd;
+  fill: #ffffff;
+}
+/* line 125, ../sass/_floatingmenu.scss */
+#floating-menu-wrapper ul li:nth-child(4) {
+  left: 11em;
+  top: 1em;
+}
+/* line 130, ../sass/_floatingmenu.scss */
+#floating-menu-wrapper ul li:nth-child(4) svg .style0 {
+  clip-rule: evenodd;
+  fill-rule: evenodd;
+  fill: #ffffff;
+}
+/* line 138, ../sass/_floatingmenu.scss */
+#floating-menu-wrapper ul li:last-child {
+  left: 20em;
+  top: -1.5em;
+}
+/* line 143, ../sass/_floatingmenu.scss */
+#floating-menu-wrapper ul li:last-child svg .style0 {
+  clip-rule: evenodd;
+  fill-rule: evenodd;
+  fill: #ffffff;
+}
+/* line 151, ../sass/_floatingmenu.scss */
 #floating-menu-wrapper ul li a {
   display: block;
   height: 45px;
@@ -1443,6 +1515,16 @@ table {
   -o-border-radius: 50%;
   border-radius: 50%;
   background-color: #4dbdec;
+}
+/* line 160, ../sass/_floatingmenu.scss */
+#floating-menu-wrapper ul li a svg {
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+}
+/* line 166, ../sass/_floatingmenu.scss */
+#floating-menu-wrapper ul li a span {
+  display: none;
 }
 
 /* line 9, ../sass/_recommendations.scss */
@@ -1542,25 +1624,13 @@ table {
   margin: 0;
   display: block;
 }
-@media (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124.8dpi), (min-resolution: 1.3dppx) {
-  /* line 96, ../sass/_recommendations.scss */
-  .recommendation .title {
-    font-size: 1.5em;
-  }
-}
-/* line 109, ../sass/_recommendations.scss */
+/* line 105, ../sass/_recommendations.scss */
 .recommendation .author {
   font-family: "Conv_ProximaNova-Regular", sans-serif;
   font-size: 1em;
   color: #919293;
   margin: 0;
   display: block;
-}
-@media (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124.8dpi), (min-resolution: 1.3dppx) {
-  /* line 109, ../sass/_recommendations.scss */
-  .recommendation .author {
-    font-size: 1.5em;
-  }
 }
 
 /* line 7, ../sass/_content.scss */
@@ -1593,7 +1663,7 @@ html {
 
 /* line 10, ../sass/_mozaik.scss */
 html {
-  background: url("../img/img_mozaik/background.png") no-repeat center center fixed;
+  background: url("../css/img_mozaik/background.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -1609,22 +1679,27 @@ html {
 }
 
 /* line 25, ../sass/_mozaik.scss */
-#logo-desktop {
+/*#logo-desktop {
   width: 344px;
   height: 58px;
   position: absolute;
   top: 50%;
   left: 50%;
   margin: -464px 0 0 -172px;
-}
+}*/
 /* line 33, ../sass/_mozaik.scss */
+#logo-desktop img {
+  max-width: 344px;
+  max-height: 58px;
+}
+/* line 38, ../sass/_mozaik.scss */
 .ua-mobile #logo-desktop {
   display: none;
 }
 
-/* line 38, ../sass/_mozaik.scss */
+/* line 43, ../sass/_mozaik.scss */
 #mainbody {
-  width: 1024px;
+  /*width: 1024px;
   height: 768px;
   position: absolute;
   top: 50%;
@@ -1633,5 +1708,18 @@ html {
   background-color: #fff;
   -webkit-box-shadow: 0 0 56px 15px rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 56px 15px rgba(0, 0, 0, 0.75);
-  overflow: hidden;
+  overflow: hidden;*/
+   background-color: #FFFFFF;
+    box-shadow: 0 0 56px 15px rgba(0, 0, 0, 0.75);
+    height: 768px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 1024px;
+}
+
+#logo-desktop{
+margin:20px auto;
+ width: 344px;
+  height: 58px;
 }

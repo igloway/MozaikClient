@@ -1,3 +1,6 @@
+/**
+  * Basic scripts
+  */
 $(document).ready(function(){
 
     if (window.devicePixelRatio > 1) {
@@ -8,5 +11,15 @@ $(document).ready(function(){
             $(this).attr('src', highres);
         });
     }
+
+    $("#floating-menu > a").click(function(){
+        var $this = $(this);
+        var $menu = $this.parent('div#floating-menu');
+        if($menu.hasClass('open')){
+            $menu.removeClass('open');
+        } else {
+            $menu.addClass('open');
+        }
+    });
 
 });

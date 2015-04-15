@@ -14,19 +14,19 @@ App.run(function ($ionicPlatform) {
 .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
     $stateProvider
-        .state('home', {
-            url: '/home',
-            name: 'home',
+        .state('app', {
+            url: '/app',
+            name: 'app',
+            templateUrl: 'templates/login.html',
+            controller: 'LoginCtrl'
+        })
+        .state('movie', {
+            url: '/movie',
             templateUrl: 'templates/reco_movie_mini.html',
             controller: 'RecoMovieCtrl'
         });
-    //        .state('reco_movie_mini', {
-    //            url: '/reco_movie_mini',
-    //            templateUrl: 'templates/reco_movie_mini.html',
-    //            controller: 'MainCtrl'
-    //        });
 
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/app');
 
     $ionicConfigProvider.views.swipeBackEnabled(false);
 });
