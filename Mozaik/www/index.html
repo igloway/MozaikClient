@@ -1,10 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html  ng-app="mozaikApp">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
+    <!-- Make it fullscreen / hide the browser URL bar -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- Make the app title different than the page title. -->
+    <meta name="apple-mobile-web-app-title" content="Mozaïk">
+
+    <!--
+        Give the status bar another colour
+        Valid values for "content" are: "default" (white), "black" and "black-translucent"
+        If set to "default" or "black", the content is displayed below the status bar. If set to
+        "black-translucent", the content is displayed under the bar.
+    -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!--
+        Add a Home icon.
+        By default, Mobile Safari searches for a file named "apple-touch-icon.png" in the root directory of your website.
+        If it can't find any image there, you can specify it using the code below. Make sure the image has a dimension
+        of 114x114 and is a PNG file. The glossy finish and resizing for the different devices will be done automatically.
+        
+        In case you don't want the gloss applied, use "apple-touch-icon-precomposed" instead of "apple-touch-icon".
+    -->
+
+    <link rel="apple-touch-icon"
+          href="css/img_mozaik/apple-touch-icon.png" />
+
+    <!-- iPad retina icon -->
+    <link href="css/img_mozaik/apple-touch-icon-152x152.png"
+          sizes="152x152"
+          rel="apple-touch-icon" />
+
+    <!-- iPad retina icon (iOS < 7) -->
+    <link href="css/img_mozaik/apple-touch-icon-144x144.png"
+          sizes="144x144"
+          rel="apple-touch-icon" />
+
+    <!-- iPad non-retina icon -->
+    <link href="css/img_mozaik/apple-touch-icon-76x76.png"
+          sizes="76x76"
+          rel="apple-touch-icon" />
+
+    <!-- iPad non-retina icon (iOS < 7) -->
+    <link href="css/img_mozaik/apple-touch-icon-72x72.png"
+          sizes="72x72"
+          rel="apple-touch-icon" />
+
+    <!--
+        Add a splash screen / startup image.
+        Take note this file exactly needs to be 320x460 for iPhone or 1004x768 for iPad, and is a PNG file.
+        Also, this only works if "apple-mobile-web-app-capable" is set to "yes".
+    -->
+    <link rel="images/apple-touch-startup-image" href="css/img_mozaik/startup.png" />
+
+    <!-- iPad retina portrait startup image -->
+    <link href="css/img_mozaik/apple-touch-startup-image-1536x2008.png"
+          media="(device-width: 768px) and (device-height: 1024px)
+                 and (-webkit-device-pixel-ratio: 2)
+                 and (orientation: portrait)"
+          rel="apple-touch-startup-image" />
+
+    <!-- iPad retina landscape startup image -->
+    <link href="css/img_mozaik/apple-touch-startup-image-1496x2048.png"
+          media="(device-width: 768px) and (device-height: 1024px)
+                 and (-webkit-device-pixel-ratio: 2)
+                 and (orientation: landscape)"
+          rel="apple-touch-startup-image" />
+
+    <!-- iPad non-retina portrait startup image -->
+    <link href="css/img_mozaik/apple-touch-startup-image-768x1004.png"
+          media="(device-width: 768px) and (device-height: 1024px)
+                 and (-webkit-device-pixel-ratio: 1)
+                 and (orientation: portrait)"
+          rel="apple-touch-startup-image" />
+
+    <!-- iPad non-retina landscape startup image -->
+    <link href="css/img_mozaik/apple-touch-startup-image-748x1024.png"
+          media="(device-width: 768px) and (device-height: 1024px)
+                 and (-webkit-device-pixel-ratio: 1)
+                 and (orientation: landscape)"
+          rel="apple-touch-startup-image" />
+
+    <!--
+        Prevent the user from elastic scrolling / rubber banding. Sadly, doesn't always work properly.
+        For a more solid solution, check out ScrollFix ( https://github.com/joelambert/ScrollFix )
+    -->
+    <script>
+        function BlockElasticScroll(event) {
+            event.preventDefault() ;
+        }
+
+        // In JavaScript, you can use "window.navigator.standalone" to detect wether
+        // the page is being viewed on your website, or as a standalone application.
+
+        // You can also the detect the device the user is using.
+        // var isIPhone = navigator.userAgent.indexOf("iPhone") != -1 ;
+        // var isIPod = navigator.userAgent.indexOf("iPod") != -1 ;
+        // var isIPad = navigator.userAgent.indexOf("iPad") != -1 ;
+        // var isIOs = isIPhone || isIPod || isIPad ;
+
+    </script>
+	<title>Mozaïk</title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -21,17 +121,21 @@
     <link rel="stylesheet" type="text/css" href="css/style_override.css" />
 
 
-    <script src="lib/javascript/vendor/jquery-1.11.2.min.js"></script>
-    <script src="lib/javascript/scripts.js"></script>
-    <script src="lib/javascript/vendor/cssua.min.js"></script>
 
 </head>
 
-<body ng-app="mozaikApp">
+<body ontouchmove="BlockElasticScroll(event);">
 
     <ion-pane>
         <ion-nav-view></ion-nav-view>
     </ion-pane>
+	
+	<script src="js/vendor/jquery-1.11.2.min.js"></script>
+	
+	<script src="js/vendor/cssua.min.js"></script>
+	<script src="js/scripts.js?v=1429037256"></script>
+	
+	
 </body>
 
 </html>

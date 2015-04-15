@@ -1679,14 +1679,14 @@ html {
 }
 
 /* line 25, ../sass/_mozaik.scss */
-/*#logo-desktop {
+#logo-desktop {
   width: 344px;
   height: 58px;
   position: absolute;
   top: 50%;
   left: 50%;
   margin: -464px 0 0 -172px;
-}*/
+}
 /* line 33, ../sass/_mozaik.scss */
 #logo-desktop img {
   max-width: 344px;
@@ -1699,7 +1699,7 @@ html {
 
 /* line 43, ../sass/_mozaik.scss */
 #mainbody {
-  /*width: 1024px;
+  width: 1024px;
   height: 768px;
   position: absolute;
   top: 50%;
@@ -1708,18 +1708,5 @@ html {
   background-color: #fff;
   -webkit-box-shadow: 0 0 56px 15px rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 56px 15px rgba(0, 0, 0, 0.75);
-  overflow: hidden;*/
-   background-color: #FFFFFF;
-    box-shadow: 0 0 56px 15px rgba(0, 0, 0, 0.75);
-    height: 768px;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    width: 1024px;
-}
-
-#logo-desktop{
-margin:20px auto;
- width: 344px;
-  height: 58px;
+  overflow: hidden;
 }
