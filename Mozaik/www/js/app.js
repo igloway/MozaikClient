@@ -20,8 +20,8 @@ App.run(function ($ionicPlatform) {
             templateUrl: 'templates/login.html',
             controller: 'LoginCtrl'
         })
-        .state('movie', {
-            url: '/movie',
+        .state('reco_movie_mini', {
+            url: '/reco_movie_mini',
             templateUrl: 'templates/reco_movie_mini.html',
             controller: 'RecoMovieCtrl'
         });

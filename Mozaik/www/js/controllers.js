@@ -4,7 +4,7 @@ App.controller('LoginCtrl', function ($scope, $state) {
     };
 
     function openMovie() {
-        $state.transitionTo('movie', null, {
+        $state.transitionTo('reco_movie_mini', null, {
             'reload': true
         });
     }
