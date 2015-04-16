@@ -3,7 +3,7 @@
 #rate a,
 #lines a,
 #remote a {
-  padding: 0 1.5em !important;
+    padding: 0 1.5em !important;
 }
 
 #volume a,
@@ -12,17 +12,30 @@
 #play-pause a,
 #forward a,
 #next a {
-  padding: 0 1.2em !important;
+    padding: 0 1.2em !important;
 }
 
-.page_padding{
+.page_padding {
     padding-left: 23px;
 }
 
-#recommendations{
+#recommendations {
     height: 550px;
 }
 
 h2 {
     margin-bottom: 0em !important;
+}
+
+.rating {
+    padding-top: 0px !important;
+}
+
+#titleReco {
+  font-family: "Conv_ProximaNova-Semibold", sans-serif !important;
+  text-transform: uppercase !important;
+  font-size: 1.125em !important;
+  color: #232527 !important;
+/*  margin: 0 !important;*/
+    margin-top: 1em !important;
 }
