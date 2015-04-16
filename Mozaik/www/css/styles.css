@@ -1,7 +1,7 @@
 /* Import Sass mixins, variables, Compass modules, etc. */
 /*! HiDPI v2.0.1 | MIT License | git.io/hidpi */
 /* line 6, ../sass/_mixins.scss */
-#nav-topbar ul:after, #buttons:after, #recommendations:after {
+#nav-topbar ul:after, #buttons:after, #recommendations:after, #login-list ul#profiles:after {
   content: "";
   display: table;
   clear: both;
@@ -1633,15 +1633,178 @@ table {
   display: block;
 }
 
-/* line 7, ../sass/_content.scss */
+/* line 6, ../sass/_login.scss */
+.login #content {
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: none;
+  padding: 0;
+}
+/* line 11, ../sass/_login.scss */
+.login #content h1 {
+  font-family: "Conv_ProximaNova-Bold", sans-serif;
+  text-transform: uppercase;
+  font-size: 3.333em;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 5px;
+  margin: 3em 0;
+}
+
+/* line 24, ../sass/_login.scss */
+.nav-previous, #login-list .nav-next,
+.nav-next {
+  width: 20px;
+}
+/* line 28, ../sass/_login.scss */
+.nav-previous svg .style0, #login-list .nav-next svg .style0,
+.nav-next svg .style0 {
+  stroke-linejoin: round;
+  stroke: #ffffff;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 4;
+  fill: none;
+}
+
+/* line 39, ../sass/_login.scss */
+#login-list {
+  position: relative;
+  margin-bottom: 100px;
+}
+/* line 43, ../sass/_login.scss */
+#login-list ul#profiles {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 530px;
+}
+/* line 51, ../sass/_login.scss */
+#login-list li {
+  display: block;
+  height: 90px;
+  width: 90px;
+  line-height: 90px;
+  float: left;
+  margin: 0 20px;
+  text-align: center;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/* line 62, ../sass/_login.scss */
+#login-list li:first-child, #login-list li:last-child {
+  height: 50px;
+  width: 50px;
+}
+/* line 66, ../sass/_login.scss */
+#login-list li:first-child a, #login-list li:last-child a {
+  height: 44px;
+  width: 44px;
+}
+/* line 73, ../sass/_login.scss */
+#login-list li:nth-child(2), #login-list li:nth-child(4) {
+  height: 70px;
+  width: 70px;
+}
+/* line 77, ../sass/_login.scss */
+#login-list li:nth-child(2) a, #login-list li:nth-child(4) a {
+  height: 64px;
+  width: 64px;
+}
+/* line 83, ../sass/_login.scss */
+#login-list li a {
+  display: inline-block;
+  height: 84px;
+  width: 84px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  overflow: hidden;
+  vertical-align: middle;
+}
+/* line 93, ../sass/_login.scss */
+#login-list li img {
+  max-height: 90px;
+}
+/* line 97, ../sass/_login.scss */
+#login-list li span {
+  color: #fff;
+  font-family: "lemonmilkregular", sans-serif;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  display: none;
+}
+/* line 105, ../sass/_login.scss */
+#login-list li.active {
+  line-height: 45px;
+}
+/* line 108, ../sass/_login.scss */
+#login-list li.active span {
+  display: inline;
+}
+/* line 114, ../sass/_login.scss */
+#login-list .nav-previous, #login-list .nav-next {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  margin-top: -9px;
+}
+/* line 121, ../sass/_login.scss */
+#login-list .nav-next {
+  left: auto;
+  right: 20%;
+}
+
+/* line 130, ../sass/_login.scss */
+#login-button p {
+  text-align: center;
+  font-family: "lemonmilkregular", sans-serif;
+  letter-spacing: 5px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* line 138, ../sass/_login.scss */
+#login-button p a {
+  -webkit-box-shadow: 0 2px 0 1px rgba(24, 54, 107, 0.6);
+  -moz-box-shadow: 0 2px 0 1px rgba(24, 54, 107, 0.6);
+  box-shadow: 0 2px 0 1px rgba(24, 54, 107, 0.6);
+  line-height: 51px !important;
+}
+/* line 143, ../sass/_login.scss */
+#login-button p a svg {
+  height: 27px;
+  vertical-align: middle;
+}
+/* line 147, ../sass/_login.scss */
+#login-button p a svg .style0 {
+  stroke-linejoin: round;
+  stroke: #ffffff;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 4;
+  fill: none;
+}
+
+/* line 5, ../sass/_buttons.scss */
+.btn-round, #login-button p a {
+  border-radius: 50%;
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  background-color: #4dbdec;
+  color: #fff;
+}
+
+/* line 9, ../sass/_content.scss */
 #content {
-  background-color: #fff;
   height: 684px;
   padding: 1em 0 1em 1em;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-/* line 14, ../sass/_content.scss */
+/* line 15, ../sass/_content.scss */
 #content h2 {
   font-family: "Conv_ProximaNova-Semibold", sans-serif;
   text-transform: uppercase;
@@ -1650,7 +1813,7 @@ table {
   margin: 0;
 }
 @media (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124.8dpi), (min-resolution: 1.3dppx) {
-  /* line 14, ../sass/_content.scss */
+  /* line 15, ../sass/_content.scss */
   #content h2 {
     font-size: 1.583em;
   }
@@ -1709,4 +1872,16 @@ html {
   -webkit-box-shadow: 0 0 56px 15px rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 56px 15px rgba(0, 0, 0, 0.75);
   overflow: hidden;
+}
+/* line 55, ../sass/_mozaik.scss */
+.login #mainbody {
+  background-image: url("../css/img_mozaik/login-background.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+@media (-webkit-min-device-pixel-ratio: 1.3), (min-resolution: 124.8dpi), (min-resolution: 1.3dppx) {
+  /* line 55, ../sass/_mozaik.scss */
+  .login #mainbody {
+    background-image: url("../css/img_mozaik/login-background@2x.jpg");
+  }
 }

@@ -1,8 +1,72 @@
-<ion-view view-title="Login" name="login">
-    <div class="padding">
-        <h1>Login Page</h1>
-        <button class="button button-positive" ng-click="methods.openMovie()">
-            Login
-        </button>
+<ion-view view-title="Login" name="login" class="login">
+    <div id="mainbody" class="container">
+
+        <div id="content">
+            <h1 class="title">Mozaik</h1>
+
+            <div id="login-list">
+                <ul id="profiles">
+                    <li>
+                        <a href="#">
+                            <img src="../images/picto-01.png" />
+                        </a>
+                        <span>Mohammed</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../images/picto-02.png" />
+                        </a>
+                        <span>Mohammed</span>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <img src="../images/picto-03.png" />
+                        </a>
+                        <span>Mohammed</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../images/picto-04.png" />
+                        </a>
+                        <span>Mohammed</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../images/picto-05.png" />
+                        </a>
+                        <span>Mohammed</span>
+                    </li>
+                </ul>
+
+                <a href="#" class="nav-previous">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 32.955 32.955" enable-background="new 0 0 32.955 32.955" xml:space="preserve">
+                        <style></style>
+                        <polyline points="23.5,30.7 9.5,16.7 23.5,2.7" class="style0" />
+                    </svg>
+                </a>
+                <a href="#" class="nav-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 32.955 32.955" enable-background="new 0 0 32.955 32.955" xml:space="preserve">
+                        <style></style>
+                        <polyline points="9.5,2.7 23.5,16.7 9.5,30.7" class="style0" />
+                    </svg>
+                </a>
+
+            </div>
+
+            <div id="login-button">
+                <p>Login</p>
+                <p>
+                    <a ng-click='methods.openMovie()'>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 44.75 43.875" enable-background="new 0 0 44.75 43.875" xml:space="preserve">
+                            <style></style>
+                            <polyline points="19,13 28.3,22.2 19,31.5" class="style0" />
+                            <circle cx="22.7" cy="21.9" r="19.2" class="style0" />
+                        </svg>
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
     </div>
 </ion-view>
