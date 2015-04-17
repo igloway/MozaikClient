@@ -11,8 +11,11 @@ App.run(function ($ionicPlatform) {
     });
 })
 
-.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
-
+.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider,configProvider) {
+	
+	configProvider.setHost('ws://mozaik.ddns.net');
+	console.log("Host server:"+configProvider.host);
+	
     $stateProvider
         .state('app', {
             url: '/app',
