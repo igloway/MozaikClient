@@ -1,5 +1,5 @@
 App.controller('LoginCtrl', function ($scope, $state) {
-     $scope.methods = {
+    $scope.methods = {
         openMovie: openMovie,
     };
 

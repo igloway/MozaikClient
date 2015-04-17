@@ -1,4 +1,4 @@
-var App = angular.module('mozaikApp', ['ionic'])
+var App = angular.module('mozaikApp', ['ionic', 'slick'])
 
 App.run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
