@@ -1,4 +1,4 @@
-var App = angular.module('mozaikApp', ['ionic'])
+var App = angular.module('mozaikApp', ['ionic','angular-json-rpc'])
 
 App.run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -13,7 +13,7 @@ App.run(function ($ionicPlatform) {
 
 .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider,configProvider) {
 	
-	configProvider.setHost('ws://mozaik.ddns.net');
+	configProvider.setHost('http://mozaik.ddns.net');
 	console.log("Host server:"+configProvider.host);
 	
     $stateProvider

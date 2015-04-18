@@ -10,7 +10,7 @@ App.provider('config', function() {
     this.$get = function() {
         var h = this.host;
         return {
-            getConfig: function() {
+            getHost: function() {
                 return h;
             }
         }

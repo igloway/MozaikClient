@@ -1,13 +1,19 @@
-App.controller('LoginCtrl', function ($scope, $state) {
-     $scope.methods = {
+App.controller('LoginCtrl', function ($scope, $state,Users) {
+    $scope.methods = {
         openMovie: openMovie,
     };
-
     function openMovie() {
         $state.transitionTo('reco_movie_mini', null, {
             'reload': true
         });
     }
+	
+	/**
+	 * Get users  
+	 **/
+	Users.getUsers(function(res){
+		console.log(res);
+	});
 });
 
 App.controller('RecoMovieCtrl', function ($scope) {
