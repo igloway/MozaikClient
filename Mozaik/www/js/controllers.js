@@ -7,7 +7,7 @@ App.controller('LoginCtrl', function ($scope, $state,Users) {
             'reload': true
         });
     }
-	
+	$scope.carouselIndex2 = 0;
 	/**
 	 * Get users  
 	 **/

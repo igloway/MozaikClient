@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  ng-app="mozaikApp">
+<html ng-app="mozaikApp">
 
 <head>
     <meta charset="utf-8">
@@ -27,28 +27,19 @@
         In case you don't want the gloss applied, use "apple-touch-icon-precomposed" instead of "apple-touch-icon".
     -->
 
-    <link rel="apple-touch-icon"
-          href="css/img_mozaik/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="css/img_mozaik/apple-touch-icon.png" />
 
     <!-- iPad retina icon -->
-    <link href="css/img_mozaik/apple-touch-icon-152x152.png"
-          sizes="152x152"
-          rel="apple-touch-icon" />
+    <link href="css/img_mozaik/apple-touch-icon-152x152.png" sizes="152x152" rel="apple-touch-icon" />
 
     <!-- iPad retina icon (iOS < 7) -->
-    <link href="css/img_mozaik/apple-touch-icon-144x144.png"
-          sizes="144x144"
-          rel="apple-touch-icon" />
+    <link href="css/img_mozaik/apple-touch-icon-144x144.png" sizes="144x144" rel="apple-touch-icon" />
 
     <!-- iPad non-retina icon -->
-    <link href="css/img_mozaik/apple-touch-icon-76x76.png"
-          sizes="76x76"
-          rel="apple-touch-icon" />
+    <link href="css/img_mozaik/apple-touch-icon-76x76.png" sizes="76x76" rel="apple-touch-icon" />
 
     <!-- iPad non-retina icon (iOS < 7) -->
-    <link href="css/img_mozaik/apple-touch-icon-72x72.png"
-          sizes="72x72"
-          rel="apple-touch-icon" />
+    <link href="css/img_mozaik/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon" />
 
     <!--
         Add a splash screen / startup image.
@@ -58,32 +49,24 @@
     <link rel="images/apple-touch-startup-image" href="css/img_mozaik/startup.png" />
 
     <!-- iPad retina portrait startup image -->
-    <link href="css/img_mozaik/apple-touch-startup-image-1536x2008.png"
-          media="(device-width: 768px) and (device-height: 1024px)
+    <link href="css/img_mozaik/apple-touch-startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px)
                  and (-webkit-device-pixel-ratio: 2)
-                 and (orientation: portrait)"
-          rel="apple-touch-startup-image" />
+                 and (orientation: portrait)" rel="apple-touch-startup-image" />
 
     <!-- iPad retina landscape startup image -->
-    <link href="css/img_mozaik/apple-touch-startup-image-1496x2048.png"
-          media="(device-width: 768px) and (device-height: 1024px)
+    <link href="css/img_mozaik/apple-touch-startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px)
                  and (-webkit-device-pixel-ratio: 2)
-                 and (orientation: landscape)"
-          rel="apple-touch-startup-image" />
+                 and (orientation: landscape)" rel="apple-touch-startup-image" />
 
     <!-- iPad non-retina portrait startup image -->
-    <link href="css/img_mozaik/apple-touch-startup-image-768x1004.png"
-          media="(device-width: 768px) and (device-height: 1024px)
+    <link href="css/img_mozaik/apple-touch-startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px)
                  and (-webkit-device-pixel-ratio: 1)
-                 and (orientation: portrait)"
-          rel="apple-touch-startup-image" />
+                 and (orientation: portrait)" rel="apple-touch-startup-image" />
 
     <!-- iPad non-retina landscape startup image -->
-    <link href="css/img_mozaik/apple-touch-startup-image-748x1024.png"
-          media="(device-width: 768px) and (device-height: 1024px)
+    <link href="css/img_mozaik/apple-touch-startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px)
                  and (-webkit-device-pixel-ratio: 1)
-                 and (orientation: landscape)"
-          rel="apple-touch-startup-image" />
+                 and (orientation: landscape)" rel="apple-touch-startup-image" />
 
     <!--
         Prevent the user from elastic scrolling / rubber banding. Sadly, doesn't always work properly.
@@ -91,7 +74,7 @@
     -->
     <script>
         function BlockElasticScroll(event) {
-            event.preventDefault() ;
+            event.preventDefault();
         }
 
         // In JavaScript, you can use "window.navigator.standalone" to detect wether
@@ -102,9 +85,8 @@
         // var isIPod = navigator.userAgent.indexOf("iPod") != -1 ;
         // var isIPad = navigator.userAgent.indexOf("iPad") != -1 ;
         // var isIOs = isIPhone || isIPod || isIPad ;
-
     </script>
-	<title>Mozaïk</title>
+    <title>Mozaïk</title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -112,11 +94,7 @@
 	
 	<script src="js/json-rpc.js"></script>
 	
-    <script src="js/app.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/directive.js"></script>
-    <script src="js/service.js"></script>
-    <script src="js/provider.js"></script>
+
 
     <link rel="stylesheet" type="text/css" href="webfonts/ProximaNova-Regular/fonts.css" />
     <link rel="stylesheet" type="text/css" href="webfonts/ProximaNova-Semibold/fonts.css" />
@@ -127,7 +105,19 @@
     <link rel="stylesheet" type="text/css" href="css/styles-rtl.css" />
     <link rel="stylesheet" type="text/css" href="css/style_override.css" />
 
+    
+    <script src="lib/jquery/dist/jquery-2.1.1.js"></script>
 
+    
+	
+	
+	<!-- INCLUDE ANGULARJS-->
+	
+	<script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/directive.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/provider.js"></script>
 
 </head>
 
@@ -136,13 +126,13 @@
     <ion-pane>
         <ion-nav-view></ion-nav-view>
     </ion-pane>
-	
-	<script src="js/vendor/jquery-1.11.2.min.js"></script>
-	
-	<script src="js/vendor/cssua.min.js"></script>
-	<script src="js/scripts.js?v=1429037256"></script>
-	
-	
+
+    <script src="js/vendor/jquery-1.11.2.min.js"></script>
+
+    <script src="js/vendor/cssua.min.js"></script>
+    <script src="js/scripts.js?v=1429037256"></script>
+
+
 </body>
 
 </html>
