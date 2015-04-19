@@ -8,7 +8,7 @@
  **/
 
 App.factory('Users', ['$http', '$q', '$rootScope', function($http, $q, $rootScope,config){
-    var host = config.getHost();
+    var host = 'ws://mozaik.ddns.net';//config.getHost();
 	 return {
 		 login:function(username,password)
 		 {
@@ -34,10 +34,10 @@ App.factory('Users', ['$http', '$q', '$rootScope', function($http, $q, $rootScop
 			 sendMessage(sock,paramjson);
 			 return qdefer.promise;
 		}
-}]);
+}}]);
 
 App.factory('LocalAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootScope,config ){
-	var host = config.getHost();
+	var host =  'ws://mozaik.ddns.net';//config.getHost();
      return {
 		 get_media:function(type,page)
 		 {

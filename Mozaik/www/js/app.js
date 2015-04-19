@@ -1,6 +1,6 @@
 
 var App = angular.module('mozaikApp', ['ionic'])
->>>>>>> origin/master
+
 
 App.run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
