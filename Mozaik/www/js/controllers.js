@@ -1,13 +1,13 @@
-App.controller('LoginCtrl', function ($scope, $state,Users) {
+App.controller('LoginCtrl', function ($scope, $state,Users,MozaikSocket) {
 
     $scope.methods = {
         openMovie: openMovie,
     };
     function openMovie() {
-		Users.login('test','test').then(function(result){
-		console.log(result);
-			goToRecoMovie();
-		});
+		// Users.login('test','test').then(function(result){
+		// console.log(result);
+			// goToRecoMovie();
+		// });
     }
 
 	function goToRecoMovie()
@@ -20,9 +20,11 @@ App.controller('LoginCtrl', function ($scope, $state,Users) {
 	/**
 	 * Get users
 	 **/
-	Users.getUsers(function(res){
-		console.log(res);
-	});
+	// Users.getUsers(function(res){
+		// console.log(res);
+	// });
+	var test = MozaikSocket;
+	console.log(test)
 });
 
 App.controller('RecoMovieCtrl', function ($scope,LocalAPI) {

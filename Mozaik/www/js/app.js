@@ -1,6 +1,5 @@
+var App = angular.module('mozaikApp', ['ionic','ngWebSocket'])
 
-var App = angular.module('mozaikApp', ['ionic'])
->>>>>>> origin/master
 
 App.run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -15,7 +14,7 @@ App.run(function ($ionicPlatform) {
 
 .config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider,configProvider) {
 	
-	configProvider.setHost('http://mozaik.ddns.net');
+	configProvider.setHost('ws://mozaik.ddns.net');
 	console.log("Host server:"+configProvider.host);
 	
     $stateProvider

@@ -6,37 +6,42 @@
  * 1. method: Get users
  * 2. method: Login users
  **/
-
-App.factory('Users', ['$http', '$q', '$rootScope', function($http, $q, $rootScope,config){
-    var host = config.getHost();
-	 return {
-		 login:function(username,password)
-		 {
-			 var qdefer = $q.defer();
-		 	 var sock = new WebSocket(host);
-			 processEventSocket(sock,qdefer);
-			 var jsonrpcparam = {"username":username,"password":password}; //{"jsonrpc": "2.0", "method":'get_media', "params": [type,page], "id": 1}
-  			 var paramjson = JSON.stringify(jsonrpcparam);
-
-			 //send message to server
-			 sendMessage(sock,paramjson);
-			 return qdefer.promise;
-		 },
-		 getUsers : function(callback){
-			return $http.jsonrpc(config.getHost()+"/get_local_user", 'GET', [], {})
-			.success(function(res){
-				if (typeof callback == "function") {
-					callback(res);
-				};
-
-			})
-			.error(function(res){
-				if (typeof callback == "function") {
-					callback(res);
-				};
-			});
-		}
+App.service('Users', ['$http', '$q', '$rootScope', function($http, $q, $rootScope){
+	this.getUsers = function(callback){
+		
+		
+	}
 }]);
+// App.factory('Users', ['$http', '$q', '$rootScope', function($http, $q, $rootScope,config){
+    // var host = config.getHost();
+	 // return {
+		 // login:function(username,password)
+		 // {
+			 // var qdefer = $q.defer();
+		 	 // var sock = new WebSocket(host);
+			 // processEventSocket(sock,qdefer);
+			 // var jsonrpcparam = {"username":username,"password":password}; //{"jsonrpc": "2.0", "method":'get_media', "params": [type,page], "id": 1}
+  			 // var paramjson = JSON.stringify(jsonrpcparam);
+
+			 
+			 // sendMessage(sock,paramjson);
+			 // return qdefer.promise;
+		 // },
+		 // getUsers : function(callback){
+			// return $http.jsonrpc(config.getHost()+"/get_local_user", 'GET', [], {})
+			// .success(function(res){
+				// if (typeof callback == "function") {
+					// callback(res);
+				// };
+
+			// })
+			// .error(function(res){
+				// if (typeof callback == "function") {
+					// callback(res);
+				// };
+			// });
+		// }
+// }]);
 
 App.factory('LocalAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootScope,config ){
 	var host = config.getHost();
