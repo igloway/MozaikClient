@@ -1,8 +1,8 @@
 App.controller('LoginCtrl', function ($scope, $state,Users) {
-     $scope.methods = {
+
+    $scope.methods = {
         openMovie: openMovie,
     };
-
     function openMovie() {
 		Users.login('test','test').then(function(result){
 		console.log(result);
@@ -15,7 +15,14 @@ App.controller('LoginCtrl', function ($scope, $state,Users) {
 		$state.transitionTo('reco_movie_mini', null, {
             'reload': true
         });
-	}
+    }
+	$scope.carouselIndex2 = 0;
+	/**
+	 * Get users
+	 **/
+	Users.getUsers(function(res){
+		console.log(res);
+	});
 });
 
 App.controller('RecoMovieCtrl', function ($scope,LocalAPI) {

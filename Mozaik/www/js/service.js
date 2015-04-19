@@ -6,8 +6,9 @@
  * 1. method: Get users
  * 2. method: Login users
  **/
-App.factory('Users', ['$http', '$q', '$rootScope', function($http, $q, $rootScope){
-    var host = 'ws://mozaik.ddns.net';
+
+App.factory('Users', ['$http', '$q', '$rootScope', function($http, $q, $rootScope,config){
+    var host = config.getHost();
 	 return {
 		 login:function(username,password)
 		 {
@@ -20,12 +21,25 @@ App.factory('Users', ['$http', '$q', '$rootScope', function($http, $q, $rootScop
 			 //send message to server
 			 sendMessage(sock,paramjson);
 			 return qdefer.promise;
-		 }
-	}
+		 },
+		 getUsers : function(callback){
+			return $http.jsonrpc(config.getHost()+"/get_local_user", 'GET', [], {})
+			.success(function(res){
+				if (typeof callback == "function") {
+					callback(res);
+				};
+
+			})
+			.error(function(res){
+				if (typeof callback == "function") {
+					callback(res);
+				};
+			});
+		}
 }]);
 
-App.factory('LocalAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootScope ){
-	var host = 'ws://mozaik.ddns.net';
+App.factory('LocalAPI', ['$http', '$q', '$rootScope', function($http, $q, $rootScope,config ){
+	var host = config.getHost();
      return {
 		 get_media:function(type,page)
 		 {
