@@ -17,10 +17,11 @@
 
 .page_padding {
     padding-left: 23px;
+    padding-right: 23px;
 }
 
 #recommendations {
-    height: 550px;
+    height: 580px;
 }
 
 h2 {
