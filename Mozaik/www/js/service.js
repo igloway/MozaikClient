@@ -22,19 +22,17 @@ App.factory('Users', ['$http', '$q', '$rootScope', function($http, $q, $rootScop
 			 sendMessage(sock,paramjson);
 			 return qdefer.promise;
 		 },
-		 getUsers : function(callback){
-			return $http.jsonrpc(config.getHost()+"/get_local_user", 'GET', [], {})
-			.success(function(res){
-				if (typeof callback == "function") {
-					callback(res);
-				};
+		 getUsers : function(){
+			 var qdefer = $q.defer();
+		 	 var sock = new WebSocket(host);
+			 processEventSocket(sock,qdefer);
 
-			})
-			.error(function(res){
-				if (typeof callback == "function") {
-					callback(res);
-				};
-			});
+			 var jsonrpcparam ={"method":"get_local_users","params":{},"jsonrpc":"2.0","id":1};
+  			 var paramjson = JSON.stringify(jsonrpcparam);
+
+			 //send message to server
+			 sendMessage(sock,paramjson);
+			 return qdefer.promise;
 		}
 }]);
 

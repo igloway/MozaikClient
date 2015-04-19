@@ -20,7 +20,7 @@ App.controller('LoginCtrl', function ($scope, $state,Users) {
 	/**
 	 * Get users
 	 **/
-	Users.getUsers(function(res){
+	Users.getUsers().then(function(res){
 		console.log(res);
 	});
 });
