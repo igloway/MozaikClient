@@ -1,17 +1,28 @@
-App.controller('LoginCtrl', function ($scope, $state) {
+App.controller('LoginCtrl', function ($scope, $state,Users) {
      $scope.methods = {
         openMovie: openMovie,
     };
 
     function openMovie() {
-        $state.transitionTo('reco_movie_mini', null, {
+		Users.login('test','test').then(function(result){
+		console.log(result);
+			goToRecoMovie();
+		});
+    }
+
+	function goToRecoMovie()
+	{
+		$state.transitionTo('reco_movie_mini', null, {
             'reload': true
         });
-    }
+	}
 });
 
-App.controller('RecoMovieCtrl', function ($scope) {
+App.controller('RecoMovieCtrl', function ($scope,LocalAPI) {
 
+	$scope.medialist ;
+	//get list
+	loadlist();
     angular.element(document).ready(function () {
         $("#floating-menu > a").click(function () {
             var $this = $(this);
@@ -24,4 +35,17 @@ App.controller('RecoMovieCtrl', function ($scope) {
         });
     });
 
+	/**************************
+	get list media from the API
+	**************************/
+	function loadlist()
+	{
+		LocalAPI.get_media('movie',1).then(function(result){
+			console.log(result);
+			if(result!=undefined && result!='' && result !='close')
+			{
+				$scope.medialist = result;
+			}
+		});
+	}
 });
