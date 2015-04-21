@@ -12,6 +12,32 @@ App.controller('LoginCtrl', function ($scope, $state, Users) {
         });
     }
 
+    angular.element(document).ready(function () {
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            slidesPerView: 5,
+            paginationClickable: true,
+            //spaceBetween: 30,
+            onImagesReady: function (swiper) {
+                ResetImage();
+            },
+
+            onSlideChangeEnd: function (swiper) {
+                ResetImage();
+            }
+        });
+
+    });
+
+    function ResetImage(){
+        //$('.swiper-slide').hide();
+        $('.swiper-slide-active').css({'width':'44px','height':'44px', 'margin-top':'25px'});
+        $('.swiper-slide-active').next().next().next().next().css({'width':'44px','height':'44px', 'margin-top':'25px'});
+        $('.swiper-slide-active').next().css({'width':'64px','height':'64px', 'margin-top':'10px'});
+        $('.swiper-slide-active').next().next().next().css({'width':'64px','height':'64px', 'margin-top':'10px'});
+        $('.swiper-slide-active').next().next().css({'width':'84px','height':'84px'});
+    }
+
     function openMovie() {
         $state.transitionTo('reco_movie_mini', null, {
             'reload': true
